@@ -1,1 +1,0 @@
-print("Let start our first app!")
