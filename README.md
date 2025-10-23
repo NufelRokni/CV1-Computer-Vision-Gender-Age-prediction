@@ -45,19 +45,6 @@ Notebook: `cnn_scratch_age-gender_prediction.ipynb`
 | Age    | MAE    | 5.57    |
 | Gender | Acc.   | 91.2%   |
 
-Figures (you can place them under `assets/` and they’ll render here):
-- Learning curves (loss, accuracy, MAE): `assets/learning_curves.png`
-- Sample predictions grid: `assets/samples.png`
-- Confusion matrix (gender): `assets/confusion_matrix.png`
-
-> If you add these files, they will automatically appear below:
-
-![Learning curves](assets/all_curves.png)
-
-![Sample predictions](assets/samples.png)
-
-![Confusion matrix](assets/confusion_matrix.png)
-
 ## Dataset format
 - Expected directory: `train_val/` containing face images.
 - Filename pattern encodes labels as: `<age>_<gender>_*.jpg`
@@ -66,6 +53,8 @@ Figures (you can place them under `assets/` and they’ll render here):
 
 In Colab, the default path used is `/content/drive/My Drive/train_val`.
 Locally, you can set `folder_train_val = "./data/train_val"` and organize files accordingly.
+
+![Sample predictions](assets/20samples_dataset.png)
 
 ## Model details
 - Input: 128×128×3
@@ -93,6 +82,8 @@ Training setup:
 	- Accuracy curve for gender classification
 	- MAE curve for age regression
 	- (Optional) Confusion matrix and qualitative error grid
+
+![Learning curves](assets/all_curves.png)
 
 ## What I focused on
 - Building a strong, readable baseline without heavy transfer learning, to show understanding of CNN building blocks.
