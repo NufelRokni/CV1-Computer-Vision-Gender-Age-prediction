@@ -65,6 +65,8 @@ Locally, you can set `folder_train_val = "./data/train_val"` and organize files 
 	- Gender: Dense(1, sigmoid)
 	- Age: Dense(1, linear)
 
+![CNN structure](assets/cnn_structure.png)
+
 Training setup:
 - Optimizer: Adam (lr=0.01)
 - Losses: `binary_crossentropy` (gender), `mean_squared_error` (age)
