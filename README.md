@@ -2,7 +2,10 @@
 
 Compact Computer Vision project where I built, trained, and evaluated a dual-head CNN that predicts a person’s gender (classification) and age (regression) directly from face images. The work is fully contained in a single, readable notebook and emphasizes clarity, solid baselines, and responsible use.
 
+## One click open
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NufelRokni/CV1-Computer-Vision-Gender-Age-prediction/blob/main/cnn_scratch_age-gender_prediction.ipynb)
+[![View in nbviewer](https://img.shields.io/badge/nbviewer-view-blue)](https://nbviewer.org/github/NufelRokni/CV1-Computer-Vision-Gender-Age-prediction/blob/main/cnn_scratch_age-gender_prediction.ipynb)
 
 ## Results (validation set in notebook):
 - Age MAE: 5.57 years
