@@ -52,7 +52,7 @@ Figures (you can place them under `assets/` and they’ll render here):
 
 > If you add these files, they will automatically appear below:
 
-![Learning curves](assets/learning_curves.png)
+![Learning curves](assets/all_curves.png)
 
 ![Sample predictions](assets/samples.png)
 
