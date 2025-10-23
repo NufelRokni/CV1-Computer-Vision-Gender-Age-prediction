@@ -1,0 +1,162 @@
+<svg width="206pt" height="757pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" style="overflow: hidden; "><g id="viewport-20251023195321721" class="svg-pan-zoom_viewport" transform="matrix(0.8309197621346703,0,0,0.8309197621346703,66.39187177589008,-91.79178918268128)" style="transform: matrix(0.83092, 0, 0, 0.83092, 66.3919, -91.7918);">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 753)">
+<title>CNN</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-753 202.5,-753 202.5,4 -4,4"></polygon>
+<!-- In -->
+<g id="node1" class="node">
+<title>In</title>
+<path fill="#f7f7f7" stroke="black" d="M80.55,-708.5C80.55,-708.5 122.59,-708.5 122.59,-708.5 128.59,-708.5 134.59,-714.5 134.59,-720.5 134.59,-720.5 134.59,-736.5 134.59,-736.5 134.59,-742.5 128.59,-748.5 122.59,-748.5 122.59,-748.5 80.55,-748.5 80.55,-748.5 74.55,-748.5 68.55,-742.5 68.55,-736.5 68.55,-736.5 68.55,-720.5 68.55,-720.5 68.55,-714.5 74.55,-708.5 80.55,-708.5"></path>
+<text text-anchor="middle" x="101.57" y="-735.5" font-family="Helvetica,sans-Serif" font-size="10.00">Input</text>
+<polyline fill="none" stroke="black" points="68.55,-728.5 134.59,-728.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-715.5" font-family="Helvetica,sans-Serif" font-size="10.00">128×128×3</text>
+</g>
+<!-- Aug -->
+<g id="node2" class="node">
+<title>Aug</title>
+<path fill="#ffe7c2" stroke="black" d="M72.5,-647.5C72.5,-647.5 130.64,-647.5 130.64,-647.5 136.64,-647.5 142.64,-653.5 142.64,-659.5 142.64,-659.5 142.64,-675.5 142.64,-675.5 142.64,-681.5 136.64,-687.5 130.64,-687.5 130.64,-687.5 72.5,-687.5 72.5,-687.5 66.5,-687.5 60.5,-681.5 60.5,-675.5 60.5,-675.5 60.5,-659.5 60.5,-659.5 60.5,-653.5 66.5,-647.5 72.5,-647.5"></path>
+<text text-anchor="middle" x="101.57" y="-674.5" font-family="Helvetica,sans-Serif" font-size="10.00">Data Aug</text>
+<polyline fill="none" stroke="black" points="60.5,-667.5 142.64,-667.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-654.5" font-family="Helvetica,sans-Serif" font-size="10.00">RandomFlip(h)</text>
+</g>
+<!-- In&#45;&gt;Aug -->
+<g id="edge1" class="edge">
+<title>In-&gt;Aug</title>
+<path fill="none" stroke="black" d="M101.57,-708.18C101.57,-705.2 101.57,-702.05 101.57,-698.9"></path>
+<polygon fill="black" stroke="black" points="105.07,-699.17 101.57,-689.17 98.07,-699.17 105.07,-699.17"></polygon>
+</g>
+<!-- C01 -->
+<g id="node3" class="node">
+<title>C01</title>
+<path fill="#f2daf7" stroke="black" d="M67.77,-586.5C67.77,-586.5 135.37,-586.5 135.37,-586.5 141.37,-586.5 147.37,-592.5 147.37,-598.5 147.37,-598.5 147.37,-614.5 147.37,-614.5 147.37,-620.5 141.37,-626.5 135.37,-626.5 135.37,-626.5 67.77,-626.5 67.77,-626.5 61.77,-626.5 55.77,-620.5 55.77,-614.5 55.77,-614.5 55.77,-598.5 55.77,-598.5 55.77,-592.5 61.77,-586.5 67.77,-586.5"></path>
+<text text-anchor="middle" x="101.57" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">1×1 Conv → 1 ch</text>
+<polyline fill="none" stroke="black" points="55.77,-606.5 147.37,-606.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-593.5" font-family="Helvetica,sans-Serif" font-size="10.00">HeNormal + bias</text>
+</g>
+<!-- Aug&#45;&gt;C01 -->
+<g id="edge2" class="edge">
+<title>Aug-&gt;C01</title>
+<path fill="none" stroke="black" d="M101.57,-647.18C101.57,-644.2 101.57,-641.05 101.57,-637.9"></path>
+<polygon fill="black" stroke="black" points="105.07,-638.17 101.57,-628.17 98.07,-638.17 105.07,-638.17"></polygon>
+</g>
+<!-- B1 -->
+<g id="node4" class="node">
+<title>B1</title>
+<path fill="#d9e8ff" stroke="black" d="M16.64,-485.5C16.64,-485.5 186.5,-485.5 186.5,-485.5 192.5,-485.5 198.5,-491.5 198.5,-497.5 198.5,-497.5 198.5,-553.5 198.5,-553.5 198.5,-559.5 192.5,-565.5 186.5,-565.5 186.5,-565.5 16.64,-565.5 16.64,-565.5 10.64,-565.5 4.64,-559.5 4.64,-553.5 4.64,-553.5 4.64,-497.5 4.64,-497.5 4.64,-491.5 10.64,-485.5 16.64,-485.5"></path>
+<text text-anchor="middle" x="101.57" y="-552.5" font-family="Helvetica,sans-Serif" font-size="10.00">Conv Block 1</text>
+<polyline fill="none" stroke="black" points="4.64,-545.5 198.5,-545.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-532.5" font-family="Helvetica,sans-Serif" font-size="10.00">3×3 Conv, 64</text>
+<polyline fill="none" stroke="black" points="4.64,-525.5 198.5,-525.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-512.5" font-family="Helvetica,sans-Serif" font-size="10.00">BN → ReLU → MaxPool → Dropout 0.10</text>
+<polyline fill="none" stroke="black" points="4.64,-505.5 198.5,-505.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-492.5" font-family="Helvetica,sans-Serif" font-size="10.00">⟶ 64×64×64</text>
+</g>
+<!-- C01&#45;&gt;B1 -->
+<g id="edge3" class="edge">
+<title>C01-&gt;B1</title>
+<path fill="none" stroke="black" d="M101.57,-586.38C101.57,-583.47 101.57,-580.35 101.57,-577.13"></path>
+<polygon fill="black" stroke="black" points="105.07,-577.41 101.57,-567.41 98.07,-577.41 105.07,-577.41"></polygon>
+</g>
+<!-- B2 -->
+<g id="node5" class="node">
+<title>B2</title>
+<path fill="#d9e8ff" stroke="black" d="M16.64,-384.5C16.64,-384.5 186.5,-384.5 186.5,-384.5 192.5,-384.5 198.5,-390.5 198.5,-396.5 198.5,-396.5 198.5,-452.5 198.5,-452.5 198.5,-458.5 192.5,-464.5 186.5,-464.5 186.5,-464.5 16.64,-464.5 16.64,-464.5 10.64,-464.5 4.64,-458.5 4.64,-452.5 4.64,-452.5 4.64,-396.5 4.64,-396.5 4.64,-390.5 10.64,-384.5 16.64,-384.5"></path>
+<text text-anchor="middle" x="101.57" y="-451.5" font-family="Helvetica,sans-Serif" font-size="10.00">Conv Block 2</text>
+<polyline fill="none" stroke="black" points="4.64,-444.5 198.5,-444.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-431.5" font-family="Helvetica,sans-Serif" font-size="10.00">3×3 Conv, 128</text>
+<polyline fill="none" stroke="black" points="4.64,-424.5 198.5,-424.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-411.5" font-family="Helvetica,sans-Serif" font-size="10.00">BN → ReLU → MaxPool → Dropout 0.15</text>
+<polyline fill="none" stroke="black" points="4.64,-404.5 198.5,-404.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-391.5" font-family="Helvetica,sans-Serif" font-size="10.00">⟶ 32×32×128</text>
+</g>
+<!-- B1&#45;&gt;B2 -->
+<g id="edge4" class="edge">
+<title>B1-&gt;B2</title>
+<path fill="none" stroke="black" d="M101.57,-485.09C101.57,-482.16 101.57,-479.19 101.57,-476.21"></path>
+<polygon fill="black" stroke="black" points="105.07,-476.29 101.57,-466.29 98.07,-476.29 105.07,-476.29"></polygon>
+</g>
+<!-- B3 -->
+<g id="node6" class="node">
+<title>B3</title>
+<path fill="#d9e8ff" stroke="black" d="M16.64,-283.5C16.64,-283.5 186.5,-283.5 186.5,-283.5 192.5,-283.5 198.5,-289.5 198.5,-295.5 198.5,-295.5 198.5,-351.5 198.5,-351.5 198.5,-357.5 192.5,-363.5 186.5,-363.5 186.5,-363.5 16.64,-363.5 16.64,-363.5 10.64,-363.5 4.64,-357.5 4.64,-351.5 4.64,-351.5 4.64,-295.5 4.64,-295.5 4.64,-289.5 10.64,-283.5 16.64,-283.5"></path>
+<text text-anchor="middle" x="101.57" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">Conv Block 3</text>
+<polyline fill="none" stroke="black" points="4.64,-343.5 198.5,-343.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-330.5" font-family="Helvetica,sans-Serif" font-size="10.00">3×3 Conv, 256</text>
+<polyline fill="none" stroke="black" points="4.64,-323.5 198.5,-323.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-310.5" font-family="Helvetica,sans-Serif" font-size="10.00">BN → ReLU → MaxPool → Dropout 0.20</text>
+<polyline fill="none" stroke="black" points="4.64,-303.5 198.5,-303.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-290.5" font-family="Helvetica,sans-Serif" font-size="10.00">⟶ 16×16×256</text>
+</g>
+<!-- B2&#45;&gt;B3 -->
+<g id="edge5" class="edge">
+<title>B2-&gt;B3</title>
+<path fill="none" stroke="black" d="M101.57,-384.09C101.57,-381.16 101.57,-378.19 101.57,-375.21"></path>
+<polygon fill="black" stroke="black" points="105.07,-375.29 101.57,-365.29 98.07,-375.29 105.07,-375.29"></polygon>
+</g>
+<!-- B4 -->
+<g id="node7" class="node">
+<title>B4</title>
+<path fill="#d9e8ff" stroke="black" d="M16.64,-182.5C16.64,-182.5 186.5,-182.5 186.5,-182.5 192.5,-182.5 198.5,-188.5 198.5,-194.5 198.5,-194.5 198.5,-250.5 198.5,-250.5 198.5,-256.5 192.5,-262.5 186.5,-262.5 186.5,-262.5 16.64,-262.5 16.64,-262.5 10.64,-262.5 4.64,-256.5 4.64,-250.5 4.64,-250.5 4.64,-194.5 4.64,-194.5 4.64,-188.5 10.64,-182.5 16.64,-182.5"></path>
+<text text-anchor="middle" x="101.57" y="-249.5" font-family="Helvetica,sans-Serif" font-size="10.00">Conv Block 4</text>
+<polyline fill="none" stroke="black" points="4.64,-242.5 198.5,-242.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-229.5" font-family="Helvetica,sans-Serif" font-size="10.00">3×3 Conv, 512</text>
+<polyline fill="none" stroke="black" points="4.64,-222.5 198.5,-222.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-209.5" font-family="Helvetica,sans-Serif" font-size="10.00">BN → ReLU → MaxPool → Dropout 0.25</text>
+<polyline fill="none" stroke="black" points="4.64,-202.5 198.5,-202.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00">⟶ 8×8×512</text>
+</g>
+<!-- B3&#45;&gt;B4 -->
+<g id="edge6" class="edge">
+<title>B3-&gt;B4</title>
+<path fill="none" stroke="black" d="M101.57,-283.09C101.57,-280.16 101.57,-277.19 101.57,-274.21"></path>
+<polygon fill="black" stroke="black" points="105.07,-274.29 101.57,-264.29 98.07,-274.29 105.07,-274.29"></polygon>
+</g>
+<!-- Head -->
+<g id="node8" class="node">
+<title>Head</title>
+<path fill="#e6f5e6" stroke="black" d="M21.36,-61.5C21.36,-61.5 181.78,-61.5 181.78,-61.5 187.78,-61.5 193.78,-67.5 193.78,-73.5 193.78,-73.5 193.78,-149.5 193.78,-149.5 193.78,-155.5 187.78,-161.5 181.78,-161.5 181.78,-161.5 21.36,-161.5 21.36,-161.5 15.36,-161.5 9.36,-155.5 9.36,-149.5 9.36,-149.5 9.36,-73.5 9.36,-73.5 9.36,-67.5 15.36,-61.5 21.36,-61.5"></path>
+<text text-anchor="middle" x="101.57" y="-148.5" font-family="Helvetica,sans-Serif" font-size="10.00">Dense Head</text>
+<polyline fill="none" stroke="black" points="9.36,-141.5 193.78,-141.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">Flatten (32768)</text>
+<polyline fill="none" stroke="black" points="9.36,-121.5 193.78,-121.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-108.5" font-family="Helvetica,sans-Serif" font-size="10.00">512 → BN → LeakyReLU → Drop 0.30</text>
+<polyline fill="none" stroke="black" points="9.36,-101.5 193.78,-101.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-88.5" font-family="Helvetica,sans-Serif" font-size="10.00">256 → BN → PReLU → Drop 0.20</text>
+<polyline fill="none" stroke="black" points="9.36,-81.5 193.78,-81.5"></polyline>
+<text text-anchor="middle" x="101.57" y="-68.5" font-family="Helvetica,sans-Serif" font-size="10.00">128 → BN → SELU → Drop 0.10</text>
+</g>
+<!-- B4&#45;&gt;Head -->
+<g id="edge7" class="edge">
+<title>B4-&gt;Head</title>
+<path fill="none" stroke="black" d="M101.57,-182.15C101.57,-179.27 101.57,-176.32 101.57,-173.36"></path>
+<polygon fill="black" stroke="black" points="105.07,-173.37 101.57,-163.37 98.07,-173.37 105.07,-173.37"></polygon>
+</g>
+<!-- Gout -->
+<g id="node9" class="node">
+<title>Gout</title>
+<path fill="#fff3b0" stroke="black" d="M12,-0.5C12,-0.5 85.14,-0.5 85.14,-0.5 91.14,-0.5 97.14,-6.5 97.14,-12.5 97.14,-12.5 97.14,-28.5 97.14,-28.5 97.14,-34.5 91.14,-40.5 85.14,-40.5 85.14,-40.5 12,-40.5 12,-40.5 6,-40.5 0,-34.5 0,-28.5 0,-28.5 0,-12.5 0,-12.5 0,-6.5 6,-0.5 12,-0.5"></path>
+<text text-anchor="middle" x="48.57" y="-27.5" font-family="Helvetica,sans-Serif" font-size="10.00">Gender</text>
+<polyline fill="none" stroke="black" points="0,-20.5 97.14,-20.5"></polyline>
+<text text-anchor="middle" x="48.57" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Dense 1 (sigmoid)</text>
+</g>
+<!-- Head&#45;&gt;Gout -->
+<g id="edge8" class="edge">
+<title>Head-&gt;Gout</title>
+<path fill="none" stroke="black" d="M72.13,-61.05C69.98,-57.45 67.86,-53.9 65.83,-50.48"></path>
+<polygon fill="black" stroke="black" points="68.93,-48.84 60.8,-42.04 62.91,-52.42 68.93,-48.84"></polygon>
+</g>
+<!-- Aout -->
+<g id="node10" class="node">
+<title>Aout</title>
+<path fill="#fff3b0" stroke="black" d="M123,-0.5C123,-0.5 186.14,-0.5 186.14,-0.5 192.14,-0.5 198.14,-6.5 198.14,-12.5 198.14,-12.5 198.14,-28.5 198.14,-28.5 198.14,-34.5 192.14,-40.5 186.14,-40.5 186.14,-40.5 123,-40.5 123,-40.5 117,-40.5 111,-34.5 111,-28.5 111,-28.5 111,-12.5 111,-12.5 111,-6.5 117,-0.5 123,-0.5"></path>
+<text text-anchor="middle" x="154.57" y="-27.5" font-family="Helvetica,sans-Serif" font-size="10.00">Age</text>
+<polyline fill="none" stroke="black" points="111,-20.5 198.14,-20.5"></polyline>
+<text text-anchor="middle" x="154.57" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Dense 1 (linear)</text>
+</g>
+<!-- Head&#45;&gt;Aout -->
+<g id="edge9" class="edge">
+<title>Head-&gt;Aout</title>
+<path fill="none" stroke="black" d="M131.02,-61.05C133.16,-57.45 135.28,-53.9 137.31,-50.48"></path>
+<polygon fill="black" stroke="black" points="140.23,-52.42 142.34,-42.04 134.21,-48.84 140.23,-52.42"></polygon>
+</g>
+</g>
+</g></svg>
