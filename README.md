@@ -72,7 +72,7 @@ Training setup:
 - Losses: `binary_crossentropy` (gender), `mean_squared_error` (age)
 - Loss weights: `{ gender_output: 10, age_output: 1 }`
 - Epochs: up to 300, Batch size: 64
-- Callbacks: EarlyStopping (patience=50, restore best), ReduceLROnPlateau schedules (training and validation monitored)
+- Callbacks: EarlyStopping (patience=50, restore best), ReduceLROnPlateau schedules (Dynamically reduces the learning rate when loss plateaus, using different factors.)
 
 ## Evaluation and analysis
 - Validation metrics (from notebook printout):
@@ -90,7 +90,6 @@ Training setup:
 ## What I focused on
 - Building a strong, readable baseline without heavy transfer learning, to show understanding of CNN building blocks.
 - Clear metrics and plots for both tasks to guide iteration.
-- Pragmatic regularization and LR scheduling to improve stability.
 
 ## Responsible AI and limitations
 Predicting age and gender from images involves sensitive attributes and potential bias.
