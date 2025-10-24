@@ -46,7 +46,7 @@ Notebook: `cnn_scratch_age-gender_prediction.ipynb`
 | Gender | Acc.   | 91.2%   |
 
 ## Dataset format
-- Expected directory: `train_val/` containing face images.
+- Expected directory: `train_val/` containing 5000 face images.
 - Filename pattern encodes labels as: `<age>_<gender>_*.jpg`
 	- `age`: integer age (e.g., 23)
 	- `gender`: 0 = Male, 1 = Female
